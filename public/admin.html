@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel — Doces Artesanais Maria</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
+<style>
+body{padding-bottom:90px}
+.top{background:var(--butter);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:var(--butter);border-top:1px solid var(--line);display:flex;z-index:15}
+.tabs button{flex:1;border:0;background:none;padding:10px 4px 12px;font:700 .78rem 'Nunito';color:var(--muted);cursor:pointer;display:grid;gap:2px;justify-items:center}
+.tabs button span{font-size:1.3rem}.tabs button.on{color:var(--coffee);box-shadow:inset 0 3px var(--gold)}
+@media(min-width:900px){.tabs{position:static;max-width:1000px;margin:18px auto 0;border:1px solid var(--line);border-radius:999px;overflow:hidden}body{padding-bottom:30px}}
+.pg{max-width:1000px;margin:0 auto;padding:22px 16px}
+.pg h2{font-size:2rem;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+.stat{background:var(--butter);border:1px solid var(--line);border-radius:var(--r);padding:16px;text-align:center}
+.stat b{display:block;font:700 2.4rem 'Cormorant Garamond',serif;color:var(--coffee)}.stat small{color:var(--muted);font-weight:700}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.panel{background:var(--butter);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:12px}
+.pr{display:grid;grid-template-columns:72px 1fr;gap:12px;align-items:center;background:var(--butter);border:1px solid var(--line);border-radius:var(--r);padding:10px;margin-bottom:10px}
+.pr .th{width:72px;height:72px;border-radius:14px;background:var(--line);overflow:hidden;display:grid;place-items:center;font-size:.7rem;color:var(--muted);text-align:center}
+.pr .th img{width:100%;height:100%;object-fit:cover}
+.pr .meta b{font-size:1.02rem}.pr .meta div{font-size:.88rem;color:var(--muted)}
+.pr .act{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
+.tag{display:inline-block;font-size:.7rem;font-weight:800;padding:2px 9px;border-radius:999px;background:var(--cream);border:1px solid var(--line);margin-left:4px}
+.tag.out{background:#f6dcd7;color:#9b3b2e}
+.f{display:grid;gap:12px}.f label{font-weight:700;font-size:.9rem;display:grid;gap:5px}
+.f .chk{display:flex;gap:10px;align-items:center;font-weight:600;min-height:44px}.f .chk input{width:22px;height:22px;accent-color:var(--coffee)}
+.modal-bg{position:fixed;inset:0;background:rgba(47,26,16,.55);z-index:50;display:none;overflow:auto;padding:16px}
+.modal-bg.open{display:block}
+.modal{background:var(--butter);border-radius:24px;max-width:520px;margin:20px auto;padding:20px}
+.modal h3{font-size:1.7rem;margin-bottom:12px}
+.preview{width:100%;aspect-ratio:4/3;border-radius:16px;background:var(--line);overflow:hidden;display:grid;place-items:center;color:var(--muted)}
+.preview img{width:100%;height:100%;object-fit:cover}
+.login{max-width:380px;margin:12vh auto;padding:0 20px;text-align:center}
+.login h1{font-size:2.2rem;margin:10px 0 18px}
+.err{color:#9b3b2e;font-weight:700;min-height:1.4em}
+.catrow{display:flex;gap:8px;align-items:center;margin-bottom:10px}.catrow input{flex:1;border:1.5px solid var(--line);border-radius:14px;padding:11px 14px;font:1rem Nunito;background:#fff}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div class="modal-bg" id="modal"><div class="modal" id="modalBox" role="dialog" aria-modal="true"></div></div>
+<script src="/common.js"></script>
+<script src="/admin.js"></script>
+</body></html>

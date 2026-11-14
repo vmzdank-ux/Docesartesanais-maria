@@ -1,0 +1,8 @@
+{
+  "name": "doces-artesanais-maria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardápio digital + painel administrativo da Doces Artesanais Maria",
+  "engines": { "node": ">=22.5" },
+  "scripts": { "start": "node --no-warnings server.js", "test": "node --no-warnings test.js" }
+}

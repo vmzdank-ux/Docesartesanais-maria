@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doces Artesanais Maria — Campinas, SP</title>
+<meta name="description" content="Cardápio digital da Doces Artesanais Maria, confeitaria artesanal em Campinas – SP. Escolha seus doces e peça pelo Direct do Instagram.">
+<meta name="theme-color" content="#f7efe3">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#topo" id="brand"></a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav id="menu">
+    <a class="l" href="#destaques">Destaques</a><a class="l" href="#cardapio">Cardápio</a><a class="l" href="#sobre">Sobre</a><a class="l" href="#depoimentos" id="navDep" hidden>Depoimentos</a><a class="l" href="#redes">Redes</a>
+    <div class="soc" id="navSoc"></div>
+  </nav>
+</div></header>
+<main id="topo">
+  <section class="hero"><div class="wrap">
+    <div>
+      <div class="eyebrow" id="hLoc">Campinas – SP</div>
+      <h1 id="hTitle"></h1>
+      <p class="sub" id="hSub"></p>
+      <div class="cta"><a class="btn" href="#destaques">Conheça nossos doces</a><a class="btn ghost" href="#cardapio">Ver cardápio</a></div>
+      <div class="soc" id="heroSoc"></div>
+    </div>
+    <div class="hero-img"><div class="frame"><img id="hImg" alt="Doces da confeitaria" width="800" height="1000" fetchpriority="high"></div><div class="tag" id="hTag"></div></div>
+  </div></section>
+
+  <section class="intro"><div class="wrap"><p id="intro"></p></div></section>
+
+  <section id="destaques"><div class="wrap">
+    <div class="sec-head"><h2>Nossos destaques</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="grid" id="featured"></div>
+  </div></section>
+
+  <section id="novidades" hidden style="padding-top:0"><div class="wrap">
+    <div class="sec-head"><h2>Novidades</h2><div class="orn">✦ ✦ ✦</div><p>Os doces mais recentes do cardápio.</p></div>
+    <div class="grid" id="news"></div>
+  </div></section>
+
+  <section id="cardapio" style="background:var(--butter);border-block:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><h2>Cardápio</h2><div class="orn">✦ ✦ ✦</div><p>Escolha seus doces, ajuste as quantidades e envie o pedido pelo Direct do Instagram.</p></div>
+    <div class="cats" id="cats"></div>
+    <div id="menuList"></div>
+  </div></section>
+
+  <section class="about" id="sobre"><div class="wrap">
+    <div class="pic"><img id="aImg" alt="Doce artesanal" loading="lazy"></div>
+    <div><div class="eyebrow">Nossa história</div><h2>Feito à mão, do jeitinho da Maria</h2><p id="about"></p><div class="facts" id="facts"></div></div>
+  </div></section>
+
+  <section id="depoimentos" hidden style="background:var(--butter);border-block:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><h2>Depoimentos</h2><div class="orn">✦ ✦ ✦</div><p>O que nossos clientes dizem sobre os doces. Toque para ampliar.</p></div>
+    <div class="deps" id="deps"></div>
+  </div></section>
+
+  <section class="follow" id="redes"><div class="wrap">
+    <h2>Acompanhe nossa confeitaria</h2>
+    <p>Venha conhecer os bastidores, as novidades e os produtos da Doces Artesanais Maria nas redes sociais.</p>
+    <div class="links" id="followLinks"></div>
+  </div></section>
+</main>
+<footer><div class="wrap">
+  <div><div class="brand" id="fBrand" style="margin-bottom:10px"></div><p id="fText" style="color:#b9a48f"></p></div>
+  <div><h4>Redes sociais</h4><div id="fSoc"></div></div>
+  <div><h4>Informações</h4><div id="fInfo"></div></div>
+  <div class="copy" id="copy"></div>
+</div></footer>
+
+<button class="btn fab" id="fab" hidden>🛍️ Meu pedido (<span id="fabN">0</span>)</button>
+<div class="drawer-bg" id="bg"></div>
+<aside class="drawer" id="drawer" aria-label="Meu pedido" aria-hidden="true">
+  <header><h3>Meu pedido</h3><button class="x" id="closeD" aria-label="Fechar">×</button></header>
+  <div class="body"><div id="items"></div>
+    <label class="note" for="obs" style="display:block;margin-top:14px;margin-bottom:6px">Observações (opcional)</label>
+    <textarea id="obs" rows="3" maxlength="400" placeholder="Ex.: data desejada, retirada ou entrega…"></textarea>
+    <p class="note" style="margin-top:12px">Aqui você só monta o pedido. Ele é combinado e confirmado com a Maria pelo Direct do Instagram — não há pagamento no site.</p>
+  </div>
+  <div class="foot"><div class="total"><span>Total estimado</span><span id="tot">R$ 0,00</span></div>
+    <button class="btn" id="copyBtn">📋 Copiar resumo do pedido</button>
+    <a class="btn ghost" id="igBtn" target="_blank" rel="noopener noreferrer">Abrir Instagram</a>
+    <p class="note">1) Copie o resumo · 2) Abra o Instagram · 3) Cole na conversa do Direct e envie.</p>
+  </div>
+</aside>
+<div class="lb" id="lb" hidden><button class="x" id="lbx" aria-label="Fechar">×</button><img id="lbi" alt="Depoimento de cliente"></div>
+<script src="/common.js"></script>
+<script src="/app.js"></script>
+</body></html>
